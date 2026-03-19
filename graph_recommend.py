@@ -1,36 +1,32 @@
 from graph_api import add_node, add_edge, get_recommendations
 
 # People
-add_node('Bob',     'Person', {'name': 'Bob'})
 add_node('Emily',   'Person', {'name': 'Emily'})
-add_node('Billy',   'Person', {'name': 'Billy'})
-add_node('Spencer',  'Person', {'name': 'Spencer'})
-add_node('Shireen', 'Person', {'name': 'Shireen'})
-add_node('Rob',     'Person', {'name': 'Rob'})
+add_node('Spencer', 'Person', {'name': 'Spencer'})
+add_node('Brendan', 'Person', {'name': 'Brendan'})
+add_node('Trevor',  'Person', {'name': 'Trevor'})
+add_node('Paxton',  'Person', {'name': 'Paxton'})
 
-# Books
-add_node('The Odyssey',    'Book', {'title': 'The Odyssey',    'price': 17.00})
-add_node('Database Design','Book', {'title': 'Database Design','price': 195.00})
-add_node('Bible',          'Book', {'title': 'Bible',          'price': 29.95})
-add_node('Marvel Comic',   'Book', {'title': 'Marvel Comic',   'price': 11.50})
+# books
+add_node('Cosmos',               'Book', {'title': 'Cosmos',               'price': 17.00})
+add_node('Database Design',      'Book', {'title': 'Database Design',      'price': 195.00})
+add_node('The Life of Cronkite', 'Book', {'title': 'The Life of Cronkite', 'price': 29.95})
+add_node('DNA and you',          'Book', {'title': 'DNA and you',          'price': 11.50})
 
-# Knows edges
-add_edge('Spencer',  'Emily',   'knows')
-add_edge('Emily',   'Arshia',  'knows')
-add_edge('Spencer',  'Shireen', 'knows')
+add_edge('Emily',   'Spencer', 'knows')  # edge 10
+add_edge('Spencer', 'Emily',   'knows')  # edge 11
+add_edge('Spencer', 'Brendan', 'knows')  # edge 12
 
-# Bought edges
-add_edge('Spencer',  'The Odyssey',    'bought')
-add_edge('Spencer',  'Database Design','bought')
-add_edge('Emily',   'Database Design','bought')
-add_edge('Emily',   'Bible',          'bought')
-add_edge('Shireen', 'Marvel Comic',   'bought')
-add_edge('Shireen', 'The Odyssey',    'bought')
-add_edge('Bob',     'Bible',          'bought')
-add_edge('Billy',   'Marvel Comic',   'bought')
-add_edge('Rob',     'Database Design','bought')
+add_edge('Emily',   'Database Design',      'bought')  # edge 1
+add_edge('Spencer', 'Cosmos',               'bought')  # edge 2
+add_edge('Spencer', 'Database Design',      'bought')  # edge 3
+add_edge('Brendan', 'Database Design',      'bought')  # edge 4
+add_edge('Brendan', 'DNA and you',          'bought')  # edge 5
+add_edge('Trevor',  'Cosmos',               'bought')  # edge 6
+add_edge('Trevor',  'Database Design',      'bought')  # edge 7
+add_edge('Paxton',  'Database Design',      'bought')  # edge 8
+add_edge('Paxton',  'The Life of Cronkite', 'bought')  # edge 9
 
-# Recommendations for Spencer
 recommendations = get_recommendations('Spencer')
 
 print("Book recommendations for Spencer:")
