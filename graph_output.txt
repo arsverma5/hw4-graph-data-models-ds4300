@@ -1,0 +1,83 @@
+What is the sum of all book prices?:
+[
+  {
+    "total_price": 253.45
+  }
+]
+
+
+how many people bought each book?:
+[
+  {
+    "title": "Cosmos",
+    "times_purchased": 2
+  },
+  {
+    "title": "Database Design",
+    "times_purchased": 5
+  },
+  {
+    "title": "The Life of Cronkite",
+    "times_purchased": 1
+  },
+  {
+    "title": "DNA and you",
+    "times_purchased": 1
+  }
+]
+
+
+What is the most expensive book?:
+[
+  {
+    "title": "Database Design",
+    "price": 195
+  }
+]
+
+
+Who does spencer know:
+[
+  {
+    "name": "Emily"
+  },
+  {
+    "name": "Brendan"
+  }
+]
+
+
+What books did spencer buy?:
+[
+  {
+    "title": "Cosmos",
+    "price": 17
+  },
+  {
+    "title": "Database Design",
+    "price": 195
+  }
+]
+
+
+Who knows each other:
+[
+  {
+    "person1": "Emily",
+    "person2": "Spencer"
+  }
+]
+
+
+What books were purchased by people who spencer knows:
+[
+  {
+    "title": "Database Design"
+  },
+  {
+    "title": "Database Design"
+  },
+  {
+    "title": "DNA and you"
+  }
+]
